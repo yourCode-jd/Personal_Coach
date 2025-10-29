@@ -76,3 +76,111 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 });
+
+// ===== Slick Slider Initialization =====
+$(".workout-slider").slick({
+  centerMode: true,
+  centerPadding: "550px" /* show side previews */,
+  slidesToShow: 1,
+  arrows: true,
+  dots: false,
+  infinite: true,
+  speed: 600,
+  responsive: [
+    {
+      breakpoint: 1024,
+      slidesToShow: 1,
+      settings: {
+        centerPadding: "550px",
+      },
+    },
+    {
+      breakpoint: 768,
+      slidesToShow: 1,
+      settings: {
+        centerPadding: "550px",
+      },
+    },
+    {
+      breakpoint: 480,
+      slidesToShow: 1,
+      settings: {
+        centerMode: false,
+        centerPadding: "550px",
+      },
+    },
+  ],
+});
+
+// ======== compare slide ==========
+
+// Before/After compare slider control (clean, updates only CSS var)
+(function () {
+  const wrap = document.querySelector(".compare-wrap");
+  if (!wrap) return;
+  const range = wrap.querySelector(".compare-range");
+  const handle = wrap.querySelector(".compare-handle");
+
+  // clamp helper
+  const clamp = (v, a = 0, b = 100) => Math.min(b, Math.max(a, v));
+
+  function setPercent(p) {
+    p = clamp(p);
+    wrap.style.setProperty("--compare-percent", p + "%");
+    if (range) range.value = Math.round(p);
+  }
+
+  if (range) range.addEventListener("input", (e) => setPercent(e.target.value));
+
+  wrap.addEventListener("click", (e) => {
+    const rect = wrap.getBoundingClientRect();
+    const p = ((e.clientX - rect.left) / rect.width) * 100;
+    setPercent(p);
+  });
+
+  let dragging = false;
+  handle.style.touchAction = "none";
+  handle.addEventListener("pointerdown", (e) => {
+    dragging = true;
+    handle.setPointerCapture(e.pointerId);
+    e.preventDefault();
+  });
+  window.addEventListener("pointermove", (e) => {
+    if (!dragging) return;
+    const rect = wrap.getBoundingClientRect();
+    const p = ((e.clientX - rect.left) / rect.width) * 100;
+    setPercent(p);
+  });
+  window.addEventListener("pointerup", (e) => {
+    if (!dragging) return;
+    dragging = false;
+    try {
+      handle.releasePointerCapture(e.pointerId);
+    } catch {}
+  });
+
+  setPercent(range ? range.value : 50);
+})();
+try {
+  if (typeof BeerSlider !== "undefined") {
+    const el = document.getElementById("beer-slider");
+    if (el)
+      new BeerSlider(el, { start: parseInt(el.dataset.beerStart || 50, 10) });
+  }
+} catch (err) {}
+
+// ===== Blog Section =====
+
+$(".blog-slider").slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  centerMode: true,
+  arrows: true,
+  dots: false,
+  autoplay: true,
+  autoplaySpeed: 2500,
+  responsive: [
+    { breakpoint: 1024, settings: { slidesToShow: 2 } },
+    { breakpoint: 600, settings: { slidesToShow: 1 } },
+  ],
+});
