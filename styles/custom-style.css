@@ -381,6 +381,10 @@ p.para {
   @media screen and (max-width: 1024px) {
     margin: 40px 0 0 auto;
   }
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 }
 
 .training-left {
