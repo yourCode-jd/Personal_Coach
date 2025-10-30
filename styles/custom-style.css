@@ -33,11 +33,29 @@ h2 {
   -webkit-background-clip: text;
   -webkit-text-stroke: 1px #fff;
   color: transparent;
+
+  @media screen and (max-width: 1680px) {
+    font-size: 50px;
+    line-height: 55px;
+  }
+
+  @media screen and (max-width: 991px) {
+    font-size: 32px;
+    line-height: 45px;
+  }
 }
 
 p.para {
   font-size: 20px;
   margin-bottom: 0;
+
+  @media screen and (max-width: 991px) {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+  }
 }
 
 /* ================= Header ================= */
@@ -53,6 +71,10 @@ p.para {
   /* background-color: rgba(15, 23, 36, 0.95);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); */
   height: var(--header-height);
+
+  @media screen and (max-width: 767px) {
+    height: 60px;
+  }
 }
 
 .logo {
@@ -61,6 +83,11 @@ p.para {
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
+
+  @media screen and (max-width: 767px) {
+    font-size: 2rem;
+    padding-left: 1rem;
+  }
 }
 
 .nav-toggle {
@@ -69,6 +96,10 @@ p.para {
   cursor: pointer;
   z-index: 70;
   padding: 0 20px 0 0;
+
+  @media screen and (max-width: 767px) {
+    padding-right: 10px;
+  }
 }
 
 .menu-icon {
@@ -90,7 +121,7 @@ p.para {
   align-items: center;
   justify-content: center;
   z-index: 65;
-  transform: translateY(-100vh);
+  transform: translateY(-100%);
   /* initially hidden */
 }
 
@@ -102,6 +133,10 @@ p.para {
   margin-bottom: 0;
   text-decoration: none;
   transition: color 0.3s ease;
+
+  @media screen and (max-width: 1680px) {
+    font-size: 60px;
+  }
 }
 
 .nav-link:hover {
@@ -130,6 +165,14 @@ p.para {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 1024px) {
+    height: calc(70vh - 96px);
+  }
+
+  /* @media screen and (max-width: 767px) {
+    height: calc(50vh - 60px);
+  } */
 }
 
 .hero-content {
@@ -162,6 +205,30 @@ p.para {
   -webkit-background-clip: text;
   -webkit-text-stroke: 0.6px #00e0ff;
   animation: shimmer 8s linear infinite;
+
+  @media screen and (max-width: 1680px) {
+    font-size: 100px;
+    line-height: 80px;
+    top: 100px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 80px;
+    line-height: 60px;
+    top: 100px;
+  }
+
+  @media screen and (max-width: 991px) {
+    font-size: 60px;
+    line-height: 60px;
+    top: 0;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 
 /* .hero-text {
@@ -216,6 +283,18 @@ p.para {
   width: 100%;
   gap: 100px;
   align-items: flex-end;
+
+  @media screen and (max-width: 1680px) {
+    gap: 60px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    gap: 20px;
+  }
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ================= Split Title Animation ================= */
@@ -228,6 +307,23 @@ p.para {
   text-transform: uppercase;
   margin: 0;
   letter-spacing: 10px;
+
+  @media screen and (max-width: 1680px) {
+    font-size: 250px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    font-size: 150px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 100px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 60px;
+    letter-spacing: 5px;
+  }
 }
 
 .split-title.right {
@@ -250,6 +346,14 @@ p.para {
 
 .training-section {
   padding: 150px 0;
+
+  @media screen and (max-width: 1680px) {
+    padding: 100px 0;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 40px 0;
+  }
 }
 
 .training-content {
@@ -259,26 +363,65 @@ p.para {
 
 .training-description.para {
   max-width: 60%;
+
+  @media screen and (max-width: 1280px) {
+    max-width: 100%;
+  }
 }
 
 .training-left-image {
   width: 400px;
   margin: 100px 0 0 auto;
+  max-width: 100%;
+
+  @media screen and (max-width: 1024px) {
+    margin: 40px 0 0 auto;
+  }
 }
 
 .training-left {
   padding: 120px 80px 80px 80px;
+
+  @media screen and (max-width: 1280px) {
+    padding: 60px 40px 40px 40px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 60px 40px 0 40px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 0 20px 0 20px;
+  }
 }
 
 .training-title {
   max-width: 80%;
   margin-top: 0;
+
+  @media screen and (max-width: 1280px) {
+    max-width: 100%;
+  }
+}
+
+.training-card {
+  height: 1000px;
+
+  @media screen and (max-width: 1024px) {
+    height: 500px;
+  }
+}
+
+.training-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* ================= features card section ================= */
 
 .features-section {
-  padding: 0 80px;
+  padding: 0 20px;
 }
 
 .features-content {
@@ -287,18 +430,11 @@ p.para {
 
 .features {
   margin-top: 50px;
-  /* background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.02),
-    rgba(255, 255, 255, 0.01)
-  ); */
-  /* background-image: url("../assets/bodybuilder.png"); */
   background-repeat: no-repeat;
   background-position: 100% 25%;
   border-radius: 30px;
   position: relative;
   overflow: visible;
-  /* box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6); */
   display: grid;
   gap: 20px;
   align-items: center;
@@ -306,16 +442,39 @@ p.para {
   width: 85%;
   max-width: 100%;
   margin: 80px auto 0;
+
+  @media screen and (max-width: 1680px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1024px) {
+    margin: 40px auto 0;
+  }
 }
 
 .features-list {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  /* left | center | right */
   gap: 20px 40px;
   align-items: center;
   justify-content: center;
   text-align: left;
+
+  @media screen and (max-width: 1280px) {
+    gap: 20px;
+  }
+
+  @media screen and (max-width: 1100px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
 }
 
 .feature-item {
@@ -325,27 +484,41 @@ p.para {
   background: hsl(0deg 0% 56.69% / 10%);
   border-radius: 100px;
   padding: 20px;
-}
 
-.feature-wrap {
-  grid-area: 1/2/4/3;
-  border-radius: 300px;
-  padding: 0;
+  @media screen and (max-width: 1024px) {
+    width: -webkit-fill-available;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 15px;
+  }
 }
 
 .features-list .feature-item:nth-of-type(1),
 .features-list .feature-item:nth-of-type(4),
 .features-list .feature-item:nth-of-type(6) {
   grid-column: 1;
+
+  @media screen and (max-width: 1100px) {
+    grid-column: unset;
+  }
 }
 
 .features-list .feature-item:nth-of-type(3) {
   grid-column: 3;
+
+  @media screen and (max-width: 1100px) {
+    grid-column: unset;
+  }
 }
 
 .features-list .feature-item:nth-of-type(5),
 .features-list .feature-item:nth-of-type(7) {
   grid-column: 3;
+
+  @media screen and (max-width: 1100px) {
+    grid-column: unset;
+  }
 }
 
 .feature-item h3 {
@@ -353,6 +526,10 @@ p.para {
   font-size: 20px;
   font-weight: 400;
   margin: 0;
+
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+  }
 }
 
 .feature-item p {
@@ -389,6 +566,28 @@ p.para {
   max-width: 100%;
   height: auto;
   overflow: hidden;
+  grid-area: 1/2/4/3;
+  border-radius: 300px;
+  padding: 0;
+
+  @media screen and (max-width: 1680px) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    width: 30%;
+    background-color: transparent;
+  }
+
+  @media screen and (max-width: 1100px) {
+    grid-area: 1/1/2/3;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 767px) {
+    order: -1;
+  }
+
 }
 
 /* small accent line under hero title */
@@ -415,6 +614,14 @@ p.para {
 /* ================= Workout Slider Section ================= */
 .workout-slider {
   padding: 150px 0;
+
+  @media screen and (max-width: 1680px) {
+    padding: 100px 0;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 40px 0;
+  }
 }
 
 .workout-slider .slider-content {
@@ -425,6 +632,14 @@ p.para {
   justify-content: center;
   margin: 10px 50px;
   box-shadow: 0 0 7px #ffffff0d;
+
+  @media screen and (max-width: 1024px) {
+    margin: 10px 20px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    height: 500px;
+  }
 }
 
 .workout-slider .slick-slide img {
@@ -441,6 +656,10 @@ p.para {
 
 .workout-slider .slider-text h3 {
   font-size: 36px;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 24px;
+  }
 }
 
 .workout-slider span.slide-index {
@@ -451,6 +670,10 @@ p.para {
   left: 50%;
   opacity: 0.1;
   font-weight: 800;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 60px;
+  }
 }
 
 .slick-prev,
@@ -472,14 +695,28 @@ p.para {
   display: flex !important;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 1024px) {
+    width: 60px;
+    height: 60px;
+    font-size: 12px;
+  }
 }
 
 .slick-prev {
   left: 40px;
+
+  @media screen and (max-width: 767px) {
+    left: 20px;
+  }
 }
 
 .slick-next {
   right: 40px;
+
+  @media screen and (max-width: 767px) {
+    right: 20px;
+  }
 }
 
 .slick-prev:hover,
@@ -521,12 +758,30 @@ p.para {
   flex-direction: column;
   justify-content: flex-end;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+
+  @media screen and (max-width: 1280px) {
+    width: 80vw;
+  }
+
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: auto;
+    padding: 20px;
+  }
 }
 
 .sticky-card h3 {
   font-size: 2rem;
   margin: 0 0 10px;
   line-height: 1.2;
+
+  @media screen and (max-width: 767px) {
+    font-size: 1.5rem;
+    margin: 0;
+  }
 }
 
 .sticky-card p {
@@ -580,6 +835,10 @@ p.para {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  @media screen and (max-width: 767px) {
+    filter: brightness(0.5);
+  }
 }
 
 .sticky-wrapper {
@@ -589,15 +848,20 @@ p.para {
   left: 0;
   top: 0;
   z-index: -1;
-  /* mix-blend-mode: multiply; */
-  /* display: none; */
-  /* opacity: 0.3; */
 }
 
 /* ================ compareSlider ==========  */
 
 .compareSlider {
   padding: 150px 0;
+
+  @media screen and (max-width: 1680px) {
+    padding: 100px 0;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 40px 0;
+  }
 }
 
 .compareSlider-content {
@@ -605,6 +869,17 @@ p.para {
   justify-content: center;
   align-items: center;
   gap: 200px;
+  padding: 0 20px;
+
+  @media screen and (max-width: 1680px) {
+    gap: 100px;
+  }
+
+  @media screen and (max-width: 991px) {
+    gap: 40px;
+    flex-direction: column;
+    align-items: start;
+  }
 }
 
 .compareSlider-content h2 {
@@ -614,6 +889,14 @@ p.para {
 .compareSlider-wrapper {
   height: 800px;
   overflow: hidden;
+
+  @media screen and (max-width: 1280px) {
+    height: 600px;
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 400px;
+  }
 }
 
 .beer-handle {
@@ -625,6 +908,14 @@ p.para {
 .blog-section {
   padding: 0 0 150px;
   text-align: center;
+
+  @media screen and (max-width: 1680px) {
+    padding: 0 0 100px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 0 0 40px;
+  }
 }
 
 .blog-section .section-head h2 {
@@ -694,6 +985,10 @@ p.para {
   display: flex;
   justify-content: center;
   gap: 20px;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
 }
 
 .social-icons a {
@@ -707,6 +1002,11 @@ p.para {
   gap: 10px;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 767px) {
+    font-size: 0;
+    padding: 10px;
+  }
 }
 
 /* ⚫ Footer */
@@ -715,16 +1015,29 @@ p.para {
   color: #ccc;
   padding: 80px 20px 40px;
   text-align: center;
+
+  @media screen and (max-width: 1024px) {
+    padding: 40px 20px 20px;
+  }
 }
 
 .footer-container {
-  max-width: 1600px;
+  max-width: 1680px;
   margin: 0 auto;
 }
 
 /* Newsletter inside footer */
 .newsletter-box {
   margin-bottom: 60px;
+
+  @media screen and (max-width: 1024px) {
+    grid-area: 2/1/3/3;
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 991px) {
+    grid-area: 3/1/3/3;
+  }
 }
 
 .newsletter-box h2 {
@@ -732,6 +1045,11 @@ p.para {
   font-size: 2rem;
   margin-bottom: 10px;
   margin-top: 0;
+
+  @media screen and (max-width: 767px) {
+    font-size: 1.5rem;
+    margin: 0;
+  }
 }
 
 .newsletter-box p {
@@ -743,6 +1061,10 @@ p.para {
   display: flex;
   justify-content: center;
   gap: 10px;
+
+  @media screen and (max-width: 1024px) {
+    justify-content: start;
+  }
 }
 
 .newsletter-form input {
@@ -777,6 +1099,19 @@ p.para {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 40px;
   text-align: left;
+
+  @media screen and (max-width: 1024px) {
+    gap: 20px;
+  }
+}
+
+.footer-col h3 {
+  font-size: 40px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 30px;
+    margin-top: 0;
+  }
 }
 
 .footer-col h3,
@@ -811,14 +1146,18 @@ p.para {
   border-top: 1px solid #222;
   margin-top: 40px;
   font-size: 0.9rem;
+
+  @media screen and (max-width: 1024px) {
+    margin-top: 20px;
+    padding-top: 0px;
+  }
 }
+
+
 
 
 /* ================= Responsive ================= */
 @media (max-width: 768px) {
-  .split-title {
-    font-size: 5rem;
-  }
 
   .nav-link {
     font-size: 2.5rem;
@@ -838,8 +1177,10 @@ p.para {
     transform: translateX(0) translateY(0);
     width: 300px;
   }
+}
 
-  .features {
-    padding: 20px;
+@media screen and (max-width: 767px) {
+  .footer-col {
+    width: -webkit-fill-available;
   }
 }

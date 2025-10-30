@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function closeDrawer() {
     gsap.to(navDrawer, {
-      y: "-100vh",
+      y: "-100%",
       duration: 0.3,
       ease: "power2.in",
       onComplete: () => {
@@ -88,25 +88,25 @@ $(".workout-slider").slick({
   speed: 600,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1680,
       slidesToShow: 1,
       settings: {
-        centerPadding: "550px",
+        centerPadding: "350px",
       },
     },
     {
-      breakpoint: 768,
+      breakpoint: 1280,
       slidesToShow: 1,
       settings: {
-        centerPadding: "550px",
+        centerPadding: "200px",
       },
     },
     {
-      breakpoint: 480,
+      breakpoint: 991,
       slidesToShow: 1,
       settings: {
         centerMode: false,
-        centerPadding: "550px",
+        centerPadding: "100px",
       },
     },
   ],
@@ -174,6 +174,7 @@ try {
 $(".blog-slider").slick({
   slidesToShow: 3,
   slidesToScroll: 1,
+  centerPadding: "0",
   centerMode: true,
   arrows: true,
   dots: false,
