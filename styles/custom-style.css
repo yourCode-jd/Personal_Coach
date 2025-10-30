@@ -359,6 +359,10 @@ p.para {
 .training-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .training-description.para {
@@ -390,6 +394,12 @@ p.para {
     padding: 60px 40px 0 40px;
   }
 
+  @media screen and (max-width: 767px) {
+    padding: 0 20px 0 20px;
+  }
+}
+
+.training-right {
   @media screen and (max-width: 767px) {
     padding: 0 20px 0 20px;
   }
