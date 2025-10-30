@@ -73,7 +73,7 @@ p.para {
   height: var(--header-height);
 
   @media screen and (max-width: 767px) {
-    height: 60px;
+    height: 80px;
   }
 }
 
